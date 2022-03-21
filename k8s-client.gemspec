@@ -28,7 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "recursive-open-struct"
   spec.add_runtime_dependency 'hashdiff'
   spec.add_runtime_dependency 'jsonpath'
-  spec.add_runtime_dependency "yaml-safe_load_stream"
+  spec.add_runtime_dependency "yaml-safe_load_stream-renewed"
   spec.add_runtime_dependency 'psych', '>= 4.0.0'
 
   spec.add_development_dependency "rake"
