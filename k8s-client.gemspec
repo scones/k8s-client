@@ -21,18 +21,18 @@ Gem::Specification.new do |spec|
   spec.bindir        = "bin"
   spec.executables   = []
   spec.require_paths = ["lib"]
-  spec.required_ruby_version = '~> 2.4'
+  spec.required_ruby_version = '> 2.4'
 
-  spec.add_runtime_dependency "excon", "~> 0.66"
-  spec.add_runtime_dependency "recursive-open-struct", "~> 1.1.0"
-  spec.add_runtime_dependency 'hashdiff', '~> 1.0.0'
-  spec.add_runtime_dependency 'jsonpath', '~> 0.9.5'
-  spec.add_runtime_dependency "yaml-safe_load_stream", "~> 0.1"
+  spec.add_runtime_dependency "excon"
+  spec.add_runtime_dependency "recursive-open-struct"
+  spec.add_runtime_dependency 'hashdiff'
+  spec.add_runtime_dependency 'jsonpath'
+  spec.add_runtime_dependency "yaml-safe_load_stream"
 
-  spec.add_development_dependency "bundler", ">= 1.17", "< 3.0"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec", "~> 3.7"
-  spec.add_development_dependency "webmock", "~> 3.6.2"
-  spec.add_development_dependency "rubocop", "~> 0.59"
-  spec.add_development_dependency 'yajl-ruby', '~> 1.4.0'
+  spec.add_development_dependency "bundler"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "webmock"
+  spec.add_development_dependency "rubocop"
+  spec.add_development_dependency 'yajl-ruby'
 end
