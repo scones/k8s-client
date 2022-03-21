@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "k8s/client/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "k8s-client"
+  spec.name          = "k8s-client-renewed"
   spec.version       = K8s::Client::VERSION
   spec.authors       = ["Kontena, Inc."]
   spec.email         = ["info@kontena.io"]
@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
   spec.bindir        = "bin"
   spec.executables   = []
   spec.require_paths = ["lib"]
+
   spec.required_ruby_version = '> 2.4'
 
   spec.add_runtime_dependency "excon"
@@ -30,7 +31,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "yaml-safe_load_stream"
   spec.add_runtime_dependency 'psych', '>= 4.0.0'
 
-  spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "webmock"
