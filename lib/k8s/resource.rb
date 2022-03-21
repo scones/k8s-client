@@ -21,7 +21,7 @@ module K8s
     # @param filename [String] file path
     # @return [K8s::Resource]
     def self.from_file(filename)
-      new(YAML.safe_load(File.read(filename), [], [], true, filename))
+      new(YAML.safe_load(File.read(filename)))
     end
 
     # @param path [String] file path
@@ -33,7 +33,10 @@ module K8s
         # recurse
         Dir.glob("#{path}/*.{yml,yaml}").sort.map { |dir| from_files(dir) }.flatten
       else
-        YAML.safe_load_stream(File.read(path), path).map{ |doc| new(doc) }
+        yaml = File.read(path)
+        hash = YAML.safe_load_stream(yaml, path)
+        hash.map{|doc| new(doc) }
+        #YAML.safe_load_stream(File.read(path), path).map{ |doc| new(doc) }
       end
     end
 
